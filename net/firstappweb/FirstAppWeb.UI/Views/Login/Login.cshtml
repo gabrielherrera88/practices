@@ -1,0 +1,87 @@
+﻿@model FirstAppWeb.Models.LoginModel
+@*indicamos que la vista trabajara con el modelo en cuestion*@
+
+@{
+    Layout = null; //le indicamos a Razor que nuestra vista no tiene layout por lo cual no sera una vista parcial a renderizarse dentro del layout principal
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>.::Mi primera aplicacion web::.</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Aplicacion web con MVC, WebApi, Web Service y WCF">
+    <meta name="author" content="Gabriel Alejandro Herrera">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+
+    @Styles.Render("~/Content/css") <!--le indicamos a Razor que inyecte los componentes de estilos definidos segun el bundle indicado-->
+    <!--"~/Content/css" es el nombre del bundle y Razor lo buscara dentro de la clase BundleConfig-->
+</head>
+<body class="bodyLogin">
+    <!--esta vista estara costruida con Razor y para autenticar realizara un post al action Authentication del controller Login con los datos del modelo correspondiente-->
+    <div class="preLoader"><div class="loaderSpin"></div></div>
+
+    <div>
+        <div class="auth-wrapper d-flex flex-row align-items-center">
+            <div class="auth-box">
+                <div class="float-left col-lg-5 col-xl-5 col-md-5 col-sm-5">
+                    <!--creo un formulario con Razor indicandole a que action y controller debe impactar y que metodo utilizar, tambien le defino estilos-->
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken();
+                        @Html.ValidationSummary(true);
+
+                        <div class="row p-b-30">
+                            <div class="col-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <!--creo un label indicando a que control corresponde y que valor mostrar debido a que la propiedad User contiene el decorado Display-->
+                                        <span class="input-group-text bg-info text-white"><i class="fas fa-user"></i> @Html.LabelFor(m => m.User, new { @style = "display:none" })</span>
+                                    </div>
+                                    <!--creo un text mapeando a que propiedad del modelo corresponde-->
+                                    @Html.TextBoxFor(m => m.User, new { @class = "form-control form-control-lg", @placeholder = "Inrese su usuario", @autocomplete = "off", @required = true })
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-info text-white"><i class="fas fa-key"></i> @Html.LabelFor(m => m.Pass, new { @style = "display:none" })</span>
+                                    </div>
+                                    @Html.PasswordFor(m => m.Pass, new { @class = "form-control form-control-lg", @placeholder = "Ingrese su password", @autocomplete = "off", @required = true })
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row border-top border-secondary">
+                            <div class="col-8">
+                                <div class="form-group">
+                                    <div class="p-t-20">
+                                        <!--creo una validacion para el control, la validacion se aplica en base a los decorados del atributo que obtiene del modelo-->
+                                        @Html.ValidationMessageFor(m => m.User, "", new { @style = "color:white" })
+                                        @Html.ValidationMessageFor(m => m.Pass, "", new { @style = "color:white" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <div class="p-t-20">
+                                        <button class="btn btn-success waves-effect waves-light float-right" id="btnLogin" type="submit"><i class="fas fa-sign-in-alt"></i> Ingresar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery") <!--ocurre lo mismo que con los estlos pero en este caso inyectaremos componentes scripts-->
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="../Scripts/app/controllers/login/loginController.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\bin\Debug\FirstAppWeb.DAL.dll
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\bin\Debug\FirstAppWeb.DAL.pdb
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\obj\Debug\FirstAppWeb.DAL.csprojResolveAssemblyReference.cache
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\obj\Debug\FirstAppWeb.DAL.csproj.CoreCompileInputs.cache
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\obj\Debug\FirstAppWeb.DAL.dll
+D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.DAL\obj\Debug\FirstAppWeb.DAL.pdb
