@@ -1,7 +1,0 @@
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\bin\FirstAppWeb.Back.WCF.dll.config
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\bin\FirstAppWeb.Back.WCF.dll
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\bin\FirstAppWeb.Back.WCF.pdb
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\obj\Debug\FirstAppWeb.Back.WCF.csprojResolveAssemblyReference.cache
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\obj\Debug\FirstAppWeb.Back.WCF.csproj.CoreCompileInputs.cache
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\obj\Debug\FirstAppWeb.Back.WCF.dll
-D:\_CODE\GitHub\gabrielherrera88\practices\net\firstappweb\FirstAppWeb.Back.WCF\obj\Debug\FirstAppWeb.Back.WCF.pdb
